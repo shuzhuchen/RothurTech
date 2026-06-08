@@ -1,23 +1,15 @@
 package week2.hw7.src;
 
-// define a class named Singleton
-public class Singleton {
+// defines an enum named Singleton
+public enum Singleton {
+    
+    // creates the only object of the Singleton enum
+    INSTANCE; 
 
-    // private constructor to force use of getInstance() to create Singleton object
-    private static Singleton obj;
+    // defines a normal method inside the enum.
+    public void doSomething() {
 
-    // private constructor to prevent instantiation from outside the class
-    private Singleton() {}
-
-    //  getInstance() is declared static, so it can be called without creating an object of the class. The first call to getInstance() creates the singleton object.
-    public static Singleton getInstance() {
-
-        // check whether the Singleton object has already been created, if not yet, create it.
-        if (obj == null) {
-            obj = new Singleton();
-        }
-
-        // return the singleton object
-        return obj;
+        // prints a message to the console
+        System.out.println("Singleton instance is doing something.");
     }
 }
