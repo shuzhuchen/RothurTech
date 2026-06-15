@@ -1,3 +1,607 @@
+## Mock for Restful endpoints design
+https://restfulmock-237462387123-us-east-1-an.s3.us-east-1.amazonaws.com/restfulmock.mov?response-content-disposition=inline&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEJ7%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJIMEYCIQDAZ5QbRm71M5SzAW3IP%2Bs%2Fzzh4dfPijOcHeEqsCmI7zwIhAPxE6ORm1S7OporvQWiSlgNc8UvlSKm6JqsZsYcnpDtfKrkDCGcQABoMMjM3NDYyMzg3MTIzIgz7sGaznHmgDpbRZ9MqlgOextDIVTVham%2BNrKk7hRE241AJ%2F72pzLMAu%2Fkw8ajznj3gciHX31GCNY6T0qbeEv2%2B9fG9ayIyLIyHn5h%2BXlnkfvRa7fc6StQYWxJIVQMwFTZe2giF%2FEVFdpG%2F%2BatE7JmhbpDmgmgn8LIuFAH0W7vgVNHpHD930uJd1RkeXifnZk0eCjK58mAmRaiwKn%2BqqyjI2VRfTflKE7SO7bmCTUv0jivv90zTDChZ02L9c7pC38LTHcd9F0pZyWwnsEMI%2F8OQyoMasK3nLXAmlEKzQrgXA2KVan2TVbIqLK1Olmb%2F%2BxZ8FaGEwUgpqYL3rkEYxb9LPo%2Blt6sK%2FzJd4XBr%2F5iEVj2z6qDtMMBr3TqbD09RFz9gbUf3ENrbbZVT5jCBnFus5vKMv%2BqqkWO%2FpiHevwCxmuMMq11Bj%2F%2FNmHhT8Fpb3g94gd3j%2FJS4VsDsnrR8axDfEO47bETOZr68nZn0xqrmNQVj3rce1odhDRcP7QO9ZXOSGYz4%2BJOhEjxucnKUNtbTbb%2Ff6LcPuVFmp%2BDhPK%2BY7g%2F6DaogMJ%2FiwdEGOt0CxFYviaS%2Fk6tIgmpzDbSm76Qi7m0LeisgZpyne7vLsdjtm2%2BwEo73DcXwetIOvu1RjS%2FllkDHN8PblL3tuugGy9t1HYnFV8MtH%2Bi9mY8TSHfN0dnM4UagKkanUpVdJbVRUOY9RV29Oj8pANvyjFHbDAPGFcZt7nNRc%2B%2Ff5WqDOLTr5U%2FphbJXGG2Hfvs0Ha5MaCDp6hxSMhrIl6vaUDpa6zm%2Fr%2FyZ3zaccNemPFoDjW0CTfl9kToqDizzLkbCK5l1f3qnk4GlCFyXv%2FC18PdvLhvAJ6Bo6iPjo3464609G9XLFyjaV0nyuDTzuskYSsGn8mWbiLpVk2kfw1%2F9p0RuqLiwXZaQbgTU%2FICN9Lfn0ESuTeUgcnwhL4Wqeynfcs%2F%2FcRsNt4iWq1EWyNNyt5WmOSZasY2t94aSGxd75gx35r5OVeIYu8%2BL8JOCOG4NM19H4VFJbs9YTkUL21TLZA%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIATOSO4PGZ7DW2GCRL%2F20260615%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260615T214237Z&X-Amz-Expires=43200&X-Amz-SignedHeaders=host&X-Amz-Signature=cf81f8e806fd1a4fb3d1a23e15c4627fd9de0c6ecb59a384e95263e736ca1602
+
+## Mock for 06/12/2026
+S3 link: https://mock0612-237462387123-us-east-1-an.s3.us-east-1.amazonaws.com/mock0612.mp4?response-content-disposition=inline&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEJ7%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJIMEYCIQDAZ5QbRm71M5SzAW3IP%2Bs%2Fzzh4dfPijOcHeEqsCmI7zwIhAPxE6ORm1S7OporvQWiSlgNc8UvlSKm6JqsZsYcnpDtfKrkDCGcQABoMMjM3NDYyMzg3MTIzIgz7sGaznHmgDpbRZ9MqlgOextDIVTVham%2BNrKk7hRE241AJ%2F72pzLMAu%2Fkw8ajznj3gciHX31GCNY6T0qbeEv2%2B9fG9ayIyLIyHn5h%2BXlnkfvRa7fc6StQYWxJIVQMwFTZe2giF%2FEVFdpG%2F%2BatE7JmhbpDmgmgn8LIuFAH0W7vgVNHpHD930uJd1RkeXifnZk0eCjK58mAmRaiwKn%2BqqyjI2VRfTflKE7SO7bmCTUv0jivv90zTDChZ02L9c7pC38LTHcd9F0pZyWwnsEMI%2F8OQyoMasK3nLXAmlEKzQrgXA2KVan2TVbIqLK1Olmb%2F%2BxZ8FaGEwUgpqYL3rkEYxb9LPo%2Blt6sK%2FzJd4XBr%2F5iEVj2z6qDtMMBr3TqbD09RFz9gbUf3ENrbbZVT5jCBnFus5vKMv%2BqqkWO%2FpiHevwCxmuMMq11Bj%2F%2FNmHhT8Fpb3g94gd3j%2FJS4VsDsnrR8axDfEO47bETOZr68nZn0xqrmNQVj3rce1odhDRcP7QO9ZXOSGYz4%2BJOhEjxucnKUNtbTbb%2Ff6LcPuVFmp%2BDhPK%2BY7g%2F6DaogMJ%2FiwdEGOt0CxFYviaS%2Fk6tIgmpzDbSm76Qi7m0LeisgZpyne7vLsdjtm2%2BwEo73DcXwetIOvu1RjS%2FllkDHN8PblL3tuugGy9t1HYnFV8MtH%2Bi9mY8TSHfN0dnM4UagKkanUpVdJbVRUOY9RV29Oj8pANvyjFHbDAPGFcZt7nNRc%2B%2Ff5WqDOLTr5U%2FphbJXGG2Hfvs0Ha5MaCDp6hxSMhrIl6vaUDpa6zm%2Fr%2FyZ3zaccNemPFoDjW0CTfl9kToqDizzLkbCK5l1f3qnk4GlCFyXv%2FC18PdvLhvAJ6Bo6iPjo3464609G9XLFyjaV0nyuDTzuskYSsGn8mWbiLpVk2kfw1%2F9p0RuqLiwXZaQbgTU%2FICN9Lfn0ESuTeUgcnwhL4Wqeynfcs%2F%2FcRsNt4iWq1EWyNNyt5WmOSZasY2t94aSGxd75gx35r5OVeIYu8%2BL8JOCOG4NM19H4VFJbs9YTkUL21TLZA%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIATOSO4PGZ7DW2GCRL%2F20260615%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260615T214327Z&X-Amz-Expires=43200&X-Amz-SignedHeaders=host&X-Amz-Signature=8abf3f4bf1a7a75359bd393bd7dec509489f9cf3303ebb25109eaa197a8164d3
+
+### 1. Can You Introduce the Spring Framework?
+
+```text
+1. Core Features
+   - IoC
+   - AOP
+
+2. Evolution
+   Spring Framework
+        ↓
+   Spring MVC
+        ↓
+   Spring Boot
+
+3. Key Difference
+   Spring -> manual configuration
+   Spring MVC -> annotation introduced
+   Spring Boot -> fully annotation driven
+```
+
+> Spring Framework is a Java enterprise framework, and the two core ideas I usually mention are IoC and AOP.
+>
+> IoC lets Spring manage object creation and dependency injection for us. AOP helps move cross-cutting concerns, like logging and exception handling, away from the main business logic.
+>
+> If we look at its evolution, Spring Framework came first, then Spring MVC, and later Spring Boot. In the earlier Spring days, developers had to write a lot of manual configuration. BeanFactory existed, but in modern web projects, ApplicationContext is used much more often.
+>
+> With Spring MVC, annotations like `@Controller` and `@RequestMapping` became very common. Spring Boot made development even easier by adding auto-configuration, embedded Tomcat, starter dependencies, and a mostly annotation-driven programming model.
+
+### 2. Which Spring Boot Versions Have You Used?
+```text
+Spring Boot 2
+  - Java 8/11/17
+
+Spring Boot 3
+  - Java 17+
+  - javax -> jakarta
+
+Recent project
+  - Spring Boot 3 + Java 17
+```
+> I have worked with both Spring Boot 2 and Spring Boot 3.
+>
+> Spring Boot 2 is commonly used with Java 8, Java 11, or Java 17. In my recent projects, I mainly used Spring Boot 3 with Java 17.
+>
+> One important change in Spring Boot 3 is the migration from the `javax.*` namespace to the `jakarta.*` namespace. Because of that change, Spring Boot 3 requires Java 17 or above.
+
+### 3. How Do You Define Profiles in Spring Boot?
+```text
+Purpose
+  DEV / QA / PROD
+
+Ways
+  - properties
+  - yaml
+
+Activation
+  - properties
+  - env variable
+  - JVM args
+
+Annotation
+  @Profile("DEV")
+  @Profile("!DEV")
+```
+> In Spring Boot, profiles are used to manage environment-specific configuration, such as dev, QA, and production settings.
+>
+> I usually define them with either `application.properties` or `application.yml`. For example, I might have `application-dev.properties` and `application-prod.properties`.
+>
+> A profile can be activated through a config file, an environment variable, or JVM arguments.
+>
+> I also use the `@Profile` annotation on beans when I only want certain beans to be loaded in a specific environment.
+
+### 4. Which Discovery Service Have You Used Before?
+```text
+Eureka
+
+Service Registry
+
+Startup
+  register
+
+Shutdown
+  deregister
+
+Annotations
+  @SpringBootApplication
+  @EnableEurekaClient
+```
+> I have used Eureka in a microservice project.
+>
+> Eureka works as a centralized service registry where services can register themselves.
+>
+> When a Spring Boot application starts, it registers itself with Eureka. If the service goes down, it will be removed from the registry.
+>
+> This allows services to find each other dynamically instead of relying on hardcoded hostnames or ports.
+>
+> Usually, I enable it by adding `@EnableEurekaClient` together with `@SpringBootApplication`.
+
+### 5. What Is AOP?
+```text
+Purpose
+  cross-cutting concerns
+
+Style 1
+  @RestControllerAdvice
+
+Style 2
+  @Aspect
+  @Pointcut
+
+WHERE
+  Pointcut
+
+WHEN
+  Before
+  After
+  Around
+```
+> AOP stands for Aspect-Oriented Programming.
+>
+> The main purpose is to separate cross-cutting concerns from business logic, so we do not repeat the same code in many places.
+>
+> In real projects, I mainly use it in two ways.
+>
+> The first one is `@RestControllerAdvice`, which is useful for global exception handling at the controller layer.
+>
+> The second one is aspect-based AOP with `@Aspect` and `@Pointcut`.
+>
+> The pointcut defines where the extra logic should be applied, and advice annotations like `@Before`, `@After`, and `@Around` define when it should run.
+>
+> Common use cases include logging, exception handling, security checks, and performance monitoring.
+
+
+### 6. How Does a Request Flow from Frontend to Database in Spring Boot?
+```text
+Browser
+ ↓
+Controller
+(restful endpoint)
+ ↓
+Service
+(interface + impl)
+ ↓
+DAO
+(JPA / Mongo / DynamoDB)
+ ↓
+Database
+
+ResponseEntity
+ ↓
+Tomcat
+ ↓
+Browser
+```
+> I usually follow a three-layer architecture.
+>
+> The request starts from the browser and first reaches the controller layer, where I expose RESTful endpoints and receive HTTP requests.
+>
+> Then the controller passes the request to the service layer, which contains the business logic. I usually use an interface plus implementation pattern to keep the design flexible.
+>
+> After that, the service calls the DAO or repository layer, which communicates with the database. For SQL databases, I typically use Spring Data JPA. For NoSQL databases, I may use Spring MongoDB or AWS DynamoDB libraries.
+>
+> After the database operation finishes, the result goes back through the service and controller layers. I usually wrap the response with `ResponseEntity`, and Tomcat sends the final HTTP response back to the browser.
+
+
+### 7. Can You Describe Spring MVC?
+```text
+MVC
+  Model
+  View
+  Controller
+
+Example
+  GET /employee/1
+  PUT /employee/1
+
+Core
+  DispatcherServlet
+
+Route
+  URL + HTTP Method
+```
+> Spring MVC stands for Model-View-Controller.
+>
+> The core component in Spring MVC is DispatcherServlet, which acts as the front controller.
+>
+> When a request like GET `/employee/1` or PUT `/employee/1` comes in, DispatcherServlet receives it first and decides which controller method should handle it based on the URL and HTTP method.
+>
+> The controller processes the request, calls the service and repository layers when needed, and then returns either a view or JSON data.
+>
+> Spring MVC handles the routing and dispatching work for us, so developers can focus more on business logic.
+
+### 8. How Do You Validate Input Data?
+```text
+Step 1
+Validation Rule
+
+@NotNull
+@NotEmpty
+@Email
+@Min
+@Max
+
+Step 2
+@Valid
+```
+> I usually validate input data in two steps.
+>
+> First, I define validation rules on DTOs, entities, or model classes with annotations like `@NotNull`, `@NotEmpty`, `@Email`, `@Min`, and `@Max`.
+>
+> Second, I enable validation in the controller by using the `@Valid` annotation.
+>
+> When the input is invalid, Spring performs validation automatically and returns validation errors before the request reaches the business logic layer.
+
+### 9. How Do You Use Spring Boot Actuator?
+```text
+1. Dependency
+
+2. Expose Endpoint
+   /health
+   /beans
+   /cache
+
+3. Prometheus
+
+4. Grafana
+```
+> I usually set up Spring Boot Actuator in four steps.
+>
+> First, I add the `spring-boot-starter-actuator` dependency.
+>
+> Second, I configure which endpoints should be exposed in the application properties file. Common endpoints include health, beans, metrics, and cache information.
+>
+> Third, I send those metrics to a time-series database like Prometheus.
+>
+> Finally, I configure Prometheus as the data source for Grafana, so the metrics can be shown on dashboards.
+>
+> In production, I only expose the endpoints that are really needed, mainly for security reasons.
+
+---
+
+### 10. How Does Spring MVC Work?
+```text
+Browser
+ ↓
+DispatcherServlet
+ ↓
+HandlerMapping
+ ↓
+Controller
+ ↓
+Service
+ ↓
+Repository
+ ↓
+Database
+ ↓
+Response
+```
+> Spring MVC is centered around DispatcherServlet, which acts as the front controller.
+>
+> When a request comes in, DispatcherServlet receives it first and asks HandlerMapping to find the matching controller method based on the URL and HTTP method.
+>
+> The controller then processes the request and calls the service layer. If database access is needed, the service layer talks to the repository layer.
+>
+> Once the processing is done, the result goes back through DispatcherServlet and is sent to the client as either JSON data or a rendered view.
+
+### 11. What Is a Controller?
+```text
+Top Layer
+
+@RestController
+
+RESTful Endpoint
+
+Exception Handling
+@RestControllerAdvice
+```
+> A controller is usually the top layer of a typical three-tier Spring Boot application.
+>
+> Its job is to expose RESTful endpoints to the UI and handle incoming HTTP requests.
+>
+> I usually write controllers with `@RestController` and mapping annotations like `@GetMapping`, `@PostMapping`, `@PutMapping`, and `@DeleteMapping`.
+>
+> The controller receives requests, validates input, calls the service layer, and returns responses.
+>
+> For exception handling, I often use `@RestControllerAdvice` to keep error handling centralized.
+
+### 12. What Is WebFlux? Have You Used It in a Project?
+```text
+Purpose
+  Reactive Programming
+
+Style 1
+  Servlet
+  Thread Per Request
+  Traditional MVC
+
+Style 2
+  Reactor
+  Channel
+  WorkerGroup
+  Async
+
+Return Type
+  Mono
+  Flux
+
+Today
+  Java21 Virtual Thread
+```
+> WebFlux is Spring's reactive, non-blocking web framework.
+>
+> Traditional Spring MVC is built on the Servlet API and follows a thread-per-request model, where each incoming request is handled by a dedicated thread.
+>
+> WebFlux takes a different approach. It is built on Reactor and uses asynchronous, event-driven processing with components like channels and worker groups.
+>
+> Instead of returning normal objects, WebFlux usually returns `Mono` for a single value and `Flux` for a stream or collection of values.
+>
+> I have studied WebFlux and built small demos with it, but most enterprise projects I worked on used Spring MVC because it is easier to debug and maintain.
+>
+> These days, with Java 21 Virtual Threads and improvements in modern Tomcat, WebFlux is not adopted as often as it was a few years ago.
+
+### 13. How Do You Connect to a Database in Spring Boot?
+```text
+Step 1
+  Spring Data JPA
+
+Step 2
+  application.properties
+  application.yml
+
+  url
+  username
+  password
+  pool size
+  timeout
+
+Step 3
+  DataSource
+
+  @Configuration
+  @Bean
+  @Value
+
+Multiple DB
+  @Qualifier
+  @Primary
+```
+> I usually connect to a database in Spring Boot in three steps.
+>
+> First, I add the Spring Data JPA dependency to the project.
+>
+> Second, I configure the datasource settings in `application.properties` or `application.yml`, including the database URL, username, password, connection pool size, and timeout settings.
+>
+> In some cases, I also use `@Configuration`, `@Bean`, and `@Value` to configure datasource settings programmatically.
+>
+> After that, Spring Boot creates and manages the datasource automatically.
+>
+> If the application has multiple databases, I can use `@Qualifier` or `@Primary` to control which datasource should be injected.
+>
+> Once the connection is ready, I typically use repositories and Spring Data JPA to interact with the database.
+
+### 14. How Do You Handle Global Exceptions in Spring Boot?
+```text
+@RestControllerAdvice
+
+@ExceptionHandler
+
+404
+400
+500
+
+Centralized Handling
+
+AOP Style #1
+```
+> I usually handle global exceptions with `@RestControllerAdvice` and `@ExceptionHandler`.
+>
+> I create a dedicated global exception handler class and define separate handler methods for different exception types.
+>
+> For example, I may return 404 for a resource not found exception, 400 for validation failures, and 500 for unexpected server errors.
+>
+> This approach keeps exception handling centralized, makes controller code cleaner, and gives the application consistent error responses.
+
+
+### 15. What Spring Boot Annotations Do You Commonly Use?
+```text
+Bootstrapping
+  @SpringBootApplication
+
+Bean Registration
+  @Component
+  @Service
+  @Repository
+  @Controller
+  @RestController
+
+Configuration
+  @Configuration
+  @Bean
+  @Value
+  @Profile
+
+DI
+  @Autowired
+  @Qualifier
+  @Primary
+  @Lazy
+
+Validation
+  @Valid
+
+AOP
+  @Aspect
+  @Pointcut
+  @RestControllerAdvice
+```
+> I use Spring Boot annotations for different purposes throughout the application.
+>
+> At the application level, I use `@SpringBootApplication`, which combines auto-configuration, Spring configuration, and component scanning.
+>
+> For bean registration, I commonly use `@Component`, `@Service`, `@Repository`, `@Controller`, and `@RestController`.
+>
+> For configuration-related work, I use `@Configuration`, `@Bean`, `@Value`, and `@Profile`.
+>
+> For dependency injection, I use `@Autowired`, `@Qualifier`, `@Primary`, and sometimes `@Lazy`.
+>
+> For validation, I use `@Valid` together with validation annotations like `@NotNull` and `@Email`.
+>
+> For AOP and exception handling, I commonly use `@Aspect`, `@Pointcut`, and `@RestControllerAdvice`.
+
+
+### 16. How Does Spring IoC Work?
+```text
+Step 1
+  Read Metadata
+
+  @SpringBootApplication
+  Component Scan
+
+Step 2
+  Bean Instantiation
+
+  @Lazy
+
+Step 3
+  Dependency Injection
+
+  Constructor
+  Setter
+  Field
+
+Step 4
+  Lifecycle Management
+
+  ApplicationContext
+```
+> IoC stands for Inversion of Control.
+>
+> Instead of creating and managing objects manually, we let Spring manage object creation, dependency injection, and lifecycle management through the IoC container.
+>
+> The process starts when the application boots up and reads metadata from annotations such as `@SpringBootApplication`.
+>
+> During component scanning, Spring finds bean definitions from annotations like `@Component`, `@Service`, `@Repository`, and `@RestController`.
+>
+> Next, Spring creates bean instances. By default, most beans are singleton-scoped, and `@Lazy` can be used when delayed initialization is needed.
+>
+> After creating the beans, Spring performs dependency injection through constructor injection, setter injection, or field injection.
+>
+> Finally, ApplicationContext manages the lifecycle of those beans throughout the application.
+>
+> This approach reduces coupling and makes the application easier to maintain and test.
+
+### 17. What Are the Ways to Inject Beans in Spring? Which One Do You Use Most?
+```text
+3 Ways
+
+1 Constructor
+2 Setter
+3 Field
+
+Most Used
+  Constructor
+```
+> There are three common ways to do dependency injection in Spring.
+>
+> They are constructor injection, setter injection, and field injection.
+>
+> Among these three, constructor injection is the one I use most often, and it is also the one generally recommended by Spring.
+>
+> Constructor injection makes dependencies explicit, improves testability, and helps catch dependency-related issues during application startup.
+
+### 18. What Is the Difference Between By Name and By Type?
+```text
+Default
+  By Type
+
+Multiple Bean
+  Ambiguous
+
+Solution
+  @Qualifier
+
+Default Bean
+  @Primary
+```
+> Spring performs dependency injection by type by default.
+>
+> For example, if there is only one implementation of an interface, Spring can automatically inject that bean based on the type.
+>
+> But if there are multiple implementations of the same type, Spring will not know which one to inject.
+>
+> In that case, I use `@Qualifier` to specify the bean by name.
+>
+> Another common approach is to mark one bean as the default implementation with `@Primary`.
+>
+> So in practice, Spring injects by type first. When there are multiple candidates, I use `@Qualifier` or `@Primary` to resolve the ambiguity.
+
+
+### 19. Why Do You Prefer Constructor Injection?
+```text
+1 Explicit Dependency
+
+2 Easier Testing
+
+3 Prevent NullPointer
+
+4 Fail Fast
+
+5 Immutable Dependency
+```
+> Constructor injection is the approach I use most often.
+>
+> First, it makes dependencies explicit because all required dependencies are listed in the constructor.
+>
+> Second, it makes unit testing easier because mock objects can be passed directly into the constructor.
+>
+> Third, it helps prevent NullPointerExceptions because required dependencies must be provided when the object is created.
+>
+> It also follows the fail-fast principle. If a dependency is missing, the application fails during startup instead of failing later at runtime.
+>
+> Finally, constructor injection works well with immutable fields because dependencies can be declared as `final`.
+
+### 20. What Java Version Can We Use with Spring Boot 3?
+```text
+Spring Boot 3
+
+Minimum
+  Java 17
+
+Common
+  Java 17
+  Java 21
+
+Major Change
+  javax
+      ↓
+  jakarta
+```
+> Spring Boot 3 requires Java 17 or above.
+>
+> In practice, Java 17 and Java 21 are the most common choices.
+>
+> One major change in Spring Boot 3 is the migration from the `javax.*` namespace to the `jakarta.*` namespace.
+>
+> Because of this migration, applications moving from Spring Boot 2 to Spring Boot 3 often need both a Java upgrade and package migration work.
+
+### 21. What Is DispatcherServlet?
+```text
+Front Controller
+
+Receive Request
+
+HandlerMapping
+
+Find Controller
+
+Execute Controller
+
+Return Response
+
+Core of Spring MVC
+```
+> DispatcherServlet is the front controller and the core component of Spring MVC.
+>
+> Every incoming HTTP request reaches DispatcherServlet first.
+>
+> DispatcherServlet then asks HandlerMapping to find the matching controller method based on the URL and HTTP method.
+>
+> Once the correct controller is found, DispatcherServlet calls that controller method and processes the result.
+>
+> Finally, the response is returned to the client either as JSON data or as a rendered view.
+>
+> In short, DispatcherServlet is responsible for routing, dispatching, and coordinating the whole request-response workflow in Spring MVC.
+
+
+
 ## Mock for 06/10/2026
 https://mock0610.s3.us-east-1.amazonaws.com/mock0610.mov?response-content-disposition=inline&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEDoaCXVzLWVhc3QtMSJIMEYCIQDzeRtmyWPKMPZsjSlitfx%2F9FHHjxiISPsX3Vp9%2FlPyEQIhAPTKnwnpg%2FNC2ddfq6cyG9IgqaZrxLRpqDcdf%2BURriIoKv0CCAMQABoMMjM3NDYyMzg3MTIzIgwX9yuLlgX0Oxvmr3Qq2gIXaJFDKV0TIPAoxEwSeL7RfEtwE4S8ubt5AZh%2FlQbgdJXrmnpRRb4D0XU7i9Gz%2BKGuGV9MKIcUH26sB89tLoBKiAaAQH18u%2FZYwpEBHZZUG%2Fjlh5riPuxSW4WvPyFO5%2FEN0ImH2Ft5srkN17m5s4FlJxPOKBieK5yeD4OMVA0UufjE%2FLBBrBB8DTvggaUhTOibDAnrwV%2FOjhdVWOZpRlrccu3huvo49PHsq3VDt7SWqxQSOwBUsuBDd4lKjuYe6HgoaML1fFNeAhFY6x9H1yrLqIFb2tDlM9r4ignUEiKyTL61R2MfWtE5mkKemIhuWNLuiF2Ar6Vj82tYqWNj45R6vz%2F3FH8h%2BgOPsxmDaOw8mpC%2BM4GnE4MHkCNtX73qDNIa%2FRUYexQQj%2FgrXpTeCDkEZ5ivkbIVuDS%2FTmD63kYJkXEYw3MztMh12GXAkGFqVB2MhsMCR7%2FwEiw5MJ3tq9EGOo4Cd5lrTz6SpJ7eZnh3HqGvp23vMkRES76i2wOaENbwVDLHspB7fLCX%2FgBdvfzobmNIWKUHKjeThRVjbmpngcTyDXfF%2Bkz3MsmoarDZem51WqNvAN0Cj97QdMMnrv8ryaU6d6rHZquoGNgXA45hd7v2wAwFBd8aQnDmSbPheFq42Gf0YSBTGt7ngnlV1%2BCXS9vKS0VIfd50v6Tg4nml8zSbydNSSXZ33%2FqfUo%2BTPPzGfYC1cYegBSvD1MAG4GuitChx6efMv1BnyJFTDCUx8a4Lx8anKgT7C4Lgn3ecZSTh9RZLmgZjLOxmYyga3XWsdrSa%2BFZJ55py%2F9y23LsSAKUWfBI%2F8X1AC2l3GCz36T2W&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIATOSO4PGZXZONSEEW%2F20260611%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260611T175758Z&X-Amz-Expires=43200&X-Amz-SignedHeaders=host&X-Amz-Signature=9283ab016514132b2d9600c6ffd501917359c557c5c3b61a369b5c68cac433ac
 ### 1. how to use stream to filter people younger than 30
