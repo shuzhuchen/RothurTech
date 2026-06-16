@@ -1,3 +1,95 @@
+## Mock for 06/15/2026
+https://mock0615-237462387123-us-east-1-an.s3.us-east-1.amazonaws.com/mock0615.mov?response-content-disposition=inline&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Security-Token=IQoJb3JpZ2luX2VjELb%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJGMEQCIDKfQ%2BS8ic9ysopST1SBzUYKZim07knvr0ekFxQcXTDhAiByTdXh06VzoWyDe6IWJTlmWnBZBXzUSCoqFDp%2ByaKlECq5Awh%2FEAAaDDIzNzQ2MjM4NzEyMyIMto%2FZCSTUsVih%2ByRaKpYDTqPFFkrzqUkNNf08LrTtep2CjA8npLGlLudkQ%2FdbGvHoHan4mzIa0MMPtSCXvJm3YciGvT1WO0lAA5JNcGxhc2HXdYVLDNrKdynHRWJRdZ2dJLtaUDYoJr3%2BL1srPhsN73OuTRIoBNTSrN3XekDOukCz9kPnghcGxj%2BBvI4bv3CLtHeazTTq8H68sN0z7eCkhCfDLib41fta1jlbu%2B5U1BXfVxjLTJf6nxP11S1rkV%2F8GQgkQKMrGuRgu285ZGlk2m7xd8tQ5oEhsDImPVjY%2FA%2B%2BKpjHLpAS1oAaSLCBXE2UBv4d912YqROyQINfAYYUmqYhswzaEglhmm75sxcUUIIMj4%2Bb364zwWYS8lEWaT8hqyg8yEoyW7t0YvwDhLo%2BD2y59SQgQ2IWNzwYPy4qg%2FDk666%2Fikbew94oda4lFE%2BDY8D6pe635BaWSo4BV9FSKzsEnIS%2BNX18JdcBTxkz4RvrZ0AN%2B0j3KwlhUFflNzBESZ%2BG67T%2FCSfpP4zywuK6Itg4Dqb4aeAgbg8nIysqYqJGvkaKkjCaicfRBjrfAhGrnpmDYfU1OXGFsPadZsIFLPcYW91kZs6vPOsjjLaFWc99hWpwWqUdDTvYmhhA4M94x5izzw2UhtLv3eVspQdr4tRj4StUUNlrW7oVRNEGuF%2BarW7L%2B08K4W3ktsBwO0XDMrmPRRiCZ%2FY%2FpUM1rlhTwMGVhfLdGYcYY1NHvgD0fZhlqNoeNky58JSDehGnuyn9J7pT1%2F8Sz%2FSQg9yg9RBgAQ66F4t2XqGJ1TWGjxwoP3KKlJh2iTh2lpj0Yj7JHt5TlAzMClJaiAA2LEX4VJ2%2BRYNhRt7cXj2WahP%2BE98zauOn5NXiB2Ak2Z3E3fCEv7VCNPXsRxxlmf6BKRxaUQLKKPADeWYRcYGRBvwuj9Pdycq%2BuWTSt1XH%2BpwhHjBk9c2K8M0RWbv8ZmqPlGwOaL8iuN%2BnkEwAgLtS88nC60eI0GUmlbfgUud9EmRCSLyYMmFlsZOd0A%2F1i%2BIfiqn4qg%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIATOSO4PGZ5JHP2JHL%2F20260616%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260616T215051Z&X-Amz-Expires=43200&X-Amz-SignedHeaders=host&X-Amz-Signature=38332792eb66488ae9a737811ac485cfe78f844cf5fe12de3a5aa07e6b23d7e8
+
+### how to increase young generation size in heap
+To increase the young generation size, we can set JVM options like `-Xmn`.
+
+Another common way is to increase the total heap size with `-Xms` and `-Xmx`. After the heap becomes larger, the JVM can also give more space to the young generation based on the GC configuration.
+
+In practice, I would first check the GC logs and memory usage. If many short-lived objects are causing frequent minor GCs, then I would increase the young generation size or adjust the heap size carefully.
+
+### how does spring mvc work 
+Spring MVC follows the request and response model. When a client sends an HTTP request, the request first goes to `DispatcherServlet`. It works like the front controller.
+
+Then `DispatcherServlet` finds the right controller method based on the URL and HTTP method. The controller usually calls the service layer for business logic, and the service layer may call the repository layer to work with the database.
+
+After that, the controller returns the result. In a REST API, the response is usually JSON.
+
+### how do you handle exception in java
+In Java, I usually handle exceptions with `try-catch-finally`, or declare them with `throws` if the caller should handle them.
+
+For checked exceptions, Java forces us to handle them at compile time. For unchecked exceptions, I usually do not catch them everywhere. In a Spring Boot project, I prefer to use `@RestControllerAdvice` and `@ExceptionHandler` to handle them globally and return a consistent error response.
+
+Also, when working with resources like files or streams, I use try-with-resources so they can be closed automatically.
+
+### rest api vs message queue 
+REST API is usually synchronous. The client sends a request and waits for the response.
+
+Message queue is asynchronous. The producer sends a message to the queue, and the consumer can process it later.
+
+REST API is good when we need an immediate result, like getting user information or submitting a form. Message queue is better for background tasks, decoupling services, or handling traffic spikes.
+
+For example, creating an order can be a REST API call, but sending an email notification after the order is created can be done through a message queue.
+
+### what annotations we use to configure customized actuator
+For a custom Actuator endpoint, I can create a class with `@Endpoint` and `@Component`. `@Endpoint` defines the endpoint id, and `@Component` makes it a Spring bean.
+
+Inside the class, I can use `@ReadOperation`, `@WriteOperation`, and `@DeleteOperation` to define what the endpoint can do. For web requests, they usually map to GET, POST, and DELETE.
+
+Finally, I need to expose the endpoint in `application.properties` or `application.yml`, for example by adding the endpoint id to `management.endpoints.web.exposure.include`.
+
+### can abstract class have no abstract method
+Yes, an abstract class can have no abstract methods.
+
+The reason is that `abstract` also means the class cannot be instantiated directly. It can still provide shared fields or common methods for subclasses. But if a class has at least one abstract method, then the class must be declared as abstract.
+
+### how can you use optional
+`Optional` is a container that may or may not have a value. I use it to make null handling more clear and reduce `NullPointerException`.
+
+For example, I can use `Optional.of(value)` when the value is not null, `Optional.ofNullable(value)` when the value may be null, and `Optional.empty()` when there is no value.
+
+When reading the value, I can use `orElse(defaultValue)`, `orElseThrow()`, or `ifPresent()`. In real projects, I usually use `Optional` as a return type when a result may not exist, but I try not to overuse it for fields or method parameters.
+
+### What is functional interface?
+A functional interface is an interface with only one abstract method.
+
+It is mainly used with lambda expressions. For example, `Function`, `Consumer`, `Supplier`, and `Predicate` are common functional interfaces in Java.
+
+We use them a lot in the Stream API, such as `filter`, `map`, and `forEach`, because we can pass behavior into those methods.
+
+### Why do you use post, instead of put
+I use POST when I want to create a new resource or trigger an operation where the server decides the result.
+
+I use PUT when I want to update or replace an existing resource, usually when the resource id is already known.
+
+The main difference is idempotency. PUT should be idempotent, so calling it multiple times should produce the same final result. POST is usually not idempotent. If I call the same POST API multiple times, it may create multiple records.
+
+### what is webflux? Have you used it in your project
+Spring WebFlux is Spring's reactive web framework. It is used to build non-blocking and asynchronous applications.
+
+Compared with Spring MVC, WebFlux does not use the traditional thread-per-request model in the same way. It uses non-blocking I/O, so a small number of threads can handle many I/O-bound requests.
+
+In WebFlux, `Mono` represents zero or one result, and `Flux` represents multiple results.
+
+I have not used WebFlux deeply in my project. Most of my project experience is with Spring MVC and REST APIs. But I understand WebFlux is useful for high-concurrency cases, streaming, or services that call many external APIs.
+
+
+### what is hashmap? 
+`HashMap` is a key-value data structure in Java. The key must be unique, but values can be duplicated.
+
+Internally, `HashMap` uses an array of buckets. It uses the key's `hashCode()` to decide where to put the entry. If multiple keys go to the same bucket, that is a hash collision.
+
+Before Java 8, collisions were mainly handled by a linked list. Since Java 8, if the list becomes too long, it can be changed to a red-black tree to improve performance.
+
+If we use a custom object as the key, we should override both `equals()` and `hashCode()`.
+
+### what is enable auto configuration
+`@EnableAutoConfiguration` is a Spring Boot annotation. It tells Spring Boot to configure the application automatically based on the dependencies, existing beans, and configuration properties.
+
+For example, if we add Spring Data JPA and a database driver, Spring Boot can automatically create a `DataSource`, configure JPA, and set up transaction management.
+
+Normally, we do not add `@EnableAutoConfiguration` directly because `@SpringBootApplication` already includes it.
+
 ## Mock for Restful endpoints design
 https://restfulmock-237462387123-us-east-1-an.s3.us-east-1.amazonaws.com/restfulmock.mov?response-content-disposition=inline&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEJ7%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJIMEYCIQDAZ5QbRm71M5SzAW3IP%2Bs%2Fzzh4dfPijOcHeEqsCmI7zwIhAPxE6ORm1S7OporvQWiSlgNc8UvlSKm6JqsZsYcnpDtfKrkDCGcQABoMMjM3NDYyMzg3MTIzIgz7sGaznHmgDpbRZ9MqlgOextDIVTVham%2BNrKk7hRE241AJ%2F72pzLMAu%2Fkw8ajznj3gciHX31GCNY6T0qbeEv2%2B9fG9ayIyLIyHn5h%2BXlnkfvRa7fc6StQYWxJIVQMwFTZe2giF%2FEVFdpG%2F%2BatE7JmhbpDmgmgn8LIuFAH0W7vgVNHpHD930uJd1RkeXifnZk0eCjK58mAmRaiwKn%2BqqyjI2VRfTflKE7SO7bmCTUv0jivv90zTDChZ02L9c7pC38LTHcd9F0pZyWwnsEMI%2F8OQyoMasK3nLXAmlEKzQrgXA2KVan2TVbIqLK1Olmb%2F%2BxZ8FaGEwUgpqYL3rkEYxb9LPo%2Blt6sK%2FzJd4XBr%2F5iEVj2z6qDtMMBr3TqbD09RFz9gbUf3ENrbbZVT5jCBnFus5vKMv%2BqqkWO%2FpiHevwCxmuMMq11Bj%2F%2FNmHhT8Fpb3g94gd3j%2FJS4VsDsnrR8axDfEO47bETOZr68nZn0xqrmNQVj3rce1odhDRcP7QO9ZXOSGYz4%2BJOhEjxucnKUNtbTbb%2Ff6LcPuVFmp%2BDhPK%2BY7g%2F6DaogMJ%2FiwdEGOt0CxFYviaS%2Fk6tIgmpzDbSm76Qi7m0LeisgZpyne7vLsdjtm2%2BwEo73DcXwetIOvu1RjS%2FllkDHN8PblL3tuugGy9t1HYnFV8MtH%2Bi9mY8TSHfN0dnM4UagKkanUpVdJbVRUOY9RV29Oj8pANvyjFHbDAPGFcZt7nNRc%2B%2Ff5WqDOLTr5U%2FphbJXGG2Hfvs0Ha5MaCDp6hxSMhrIl6vaUDpa6zm%2Fr%2FyZ3zaccNemPFoDjW0CTfl9kToqDizzLkbCK5l1f3qnk4GlCFyXv%2FC18PdvLhvAJ6Bo6iPjo3464609G9XLFyjaV0nyuDTzuskYSsGn8mWbiLpVk2kfw1%2F9p0RuqLiwXZaQbgTU%2FICN9Lfn0ESuTeUgcnwhL4Wqeynfcs%2F%2FcRsNt4iWq1EWyNNyt5WmOSZasY2t94aSGxd75gx35r5OVeIYu8%2BL8JOCOG4NM19H4VFJbs9YTkUL21TLZA%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIATOSO4PGZ7DW2GCRL%2F20260615%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260615T214237Z&X-Amz-Expires=43200&X-Amz-SignedHeaders=host&X-Amz-Signature=cf81f8e806fd1a4fb3d1a23e15c4627fd9de0c6ecb59a384e95263e736ca1602
 
