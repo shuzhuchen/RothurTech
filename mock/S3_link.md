@@ -1,3 +1,116 @@
+## Mock for 06/16/2026
+https://mock0616-237462387123-us-east-1-an.s3.us-east-1.amazonaws.com/mock0616.mov?response-content-disposition=inline&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEM3%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIQD7QONbpNNFJxyZaDuKcFuHybXcCDSP3zgGhqrpaOjlpwIgTBBG%2FnROc9vypnSY6od6FA8UDq1paXPIgBw35gQfw1UqwgMIlv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgwyMzc0NjIzODcxMjMiDPmtnOBy8CJCfATvLSqWA6uHGLKfi7F%2Bcl3k6KRWE0Dfv8wgKArqxkSD9n9dyJafiEeRPat68OpAnzN3jfXWNYrrxUsJWFwWM2qyKzvfcW3IEyENJOzUBtxti56MMqO9Z3L9EXpqa0ADKyzVTYe0Hq0LwWUWptqkqRqEzIALWz72FHpuvAg%2BJFalHFCqM%2FBQAPOE8XNHop9kMz7ajV2l2tQa09NdOp6mMP%2Fmhy%2Bh6jLYsdQFD2qEExzKsi5iDkPMv8u9PHHTOtr4lUEeryUsRDEw6e641SQMfwc348hKgQUVMXMLutfvtGS49MEcvgAs2jA6f5jhdqVyiHd10RQ1gAwjCnEtiyKS2XTn9%2BnUivU61nWYr47sTsT1hShtXnlL%2FECwH5bDqeHRfkXduv7c9OqP3vRt6jSgJ2RLSHJFWnJPZXW%2B9zvFIb1GZfirmJlUha2XYkacsj4hlSYot5OvzEtVz8FvC1U7kYAe47J%2F%2BrJWP0cUXClyndl2AE45XcLkli%2Bx%2FO2ToZTGWd7eT%2B%2FZfGOWT1SzizxJIQvkO9X8yRXsn60zW6Mw%2FYnM0QY63gLvjkNqY63oKwJmlCrXho6AK%2FZOEhjOnVJMM5SoeN%2BrNVjvuEIOBU6%2BiupHy9l8c%2Ftvpr7czwvbkyXMcx2%2FZBb5H4TTa42w4vtBhoIkvfLLSRqQMlMtAKyhQT0n%2BXhB5nTKfyXpYuna0dbA8ho6RxV9nUd6WGTbYb48CnslkJcq9BZyg%2BVcNNnFoSo%2BtT6rVs%2Fx8n4W9xxvvbdU9bbDaI06Uo5%2B5dikQwWqyYd9GOAw964nVj7kuOd0%2BRJVHgrogGTUj%2BVP8rDEfV04nyXxOgYfDoVp0gCohIfS%2BTOVDGhqzx7zV6IRBSJX0LtBBSHutFeznNM%2BXUQKmuCgdz31jwKkBG%2FbiJgbxTR3SNhe3X3KKH2GI2C%2B%2FMajgi4Jh9Sm%2BUoAsIsfztHrCpeOPpiTOdh8ZjcTzy3lMj2tUMVORutWwlXMt3wsvyIFED6%2FVVIbXozE1kZlDndaxTlAXarreg%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIATOSO4PGZQT2HTAGM%2F20260617%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260617T203702Z&X-Amz-Expires=43200&X-Amz-SignedHeaders=host&X-Amz-Signature=f4676148956441d86ebe50e0493118a67e4c3aead915ddcff2d38fb56fe8550d
+
+### if we override hashcode not overriding equals
+When we use hash-based data structures such as HashMap, HashSet, or ConcurrentHashMap, hashCode() is used to find the bucket, and equals() is used to compare objects inside the bucket.
+
+If we override hashCode() but do not override equals(), two logically equal objects may end up being treated as different keys after a hash collision.
+
+As a result, instead of updating an existing value, HashMap may create a new entry, which can lead to duplicate logical keys.
+
+### how you write restapi in spring boot
+To write REST APIs in Spring Boot, I first create a controller using @RestController, which is equivalent to @Controller plus @ResponseBody.
+
+Then I use @RequestMapping to define the base URL. The URL should use nouns instead of verbs, and we usually include a version such as /api/v1/students.
+
+For CRUD operations, I use HTTP methods such as GET, POST, PUT, and DELETE through annotations like @GetMapping, @PostMapping, @PutMapping, and @DeleteMapping.
+
+For requests, I can use @RequestHeader, @RequestBody, @RequestParam, and @PathVariable depending on where the data comes from.
+
+For validation, I use @Valid together with validation annotations such as @NotNull, @Min, @Max, and @Email on the request DTO.
+
+For responses, I usually return ResponseEntity so I can control both the response body and HTTP status code.
+
+For exception handling, I typically use @RestControllerAdvice as a global exception handler, which is implemented using AOP.
+
+### what is thread state
+ava has six thread states.
+
+A thread starts in the NEW state when we create a Thread object.
+
+After we call start(), it moves to RUNNABLE. RUNNABLE means the thread is ready to run or currently running.
+
+If a thread is waiting for a synchronized lock, it enters BLOCKED.
+
+If it waits indefinitely for another thread, such as calling wait() or join(), it enters WAITING.
+
+If it waits for a specific amount of time, such as sleep() or wait(timeout), it enters TIMED_WAITING.
+
+When the run() method finishes, the thread enters TERMINATED.
+
+### what is thread local
+ThreadLocal provides a separate copy of a variable for each thread.
+
+Instead of sharing the same variable, each thread stores its own value.
+
+It is commonly used for request context, user information, trace IDs, transaction context, and logging information.
+
+Internally, each thread maintains a ThreadLocalMap. The ThreadLocal object acts as the key, and the value is stored inside the current thread.
+
+When using thread pools, we should call remove() in a finally block to avoid stale data and memory leaks.
+
+### what is CORS
+CORS stands for Cross-Origin Resource Sharing.
+
+It is a browser security mechanism that controls whether a frontend application can access resources from another origin.
+
+An origin consists of protocol, domain, and port. For example, localhost:3000 calling localhost:8080 is cross-origin because the port is different.
+
+Browsers block many cross-origin requests by default.
+
+In Spring Boot, we can enable CORS using @CrossOrigin or a global CORS configuration. Spring will automatically add the required response headers.
+
+### Map vs filter
+Both map() and filter() are part of the Stream API.
+
+filter() is used to keep or remove elements based on a condition. It accepts a Predicate functional interface and does not change the element type.
+
+map() is used to transform one object into another. It accepts a Function functional interface and may change the element type.
+
+Both are commonly written using lambda expressions.
+
+For example, filter() can keep users older than 30, while map() can convert User objects into user names.
+
+### how to send request from angular to backend
+In Angular, I use HttpClient to send requests to the backend.
+
+I inject HttpClient into a service and then use methods such as get(), post(), put(), and delete().
+
+HttpClient works asynchronously and returns an Observable.
+
+When we call subscribe(), Angular sends the request and processes the response when it arrives.
+
+If the frontend and backend run on different origins, the backend must configure CORS to allow the request.
+
+In real projects, I often use HTTP interceptors to add authentication tokens and handle common errors.
+
+### what is pattern matching
+Pattern matching is a feature introduced in newer Java versions to simplify type checking and casting. Before pattern matching, we had to check the type and then manually cast it.
+```
+if (obj instanceof String) {
+    String s = (String) obj;
+    System.out.println(s.toLowerCase());
+}
+```
+with pattern matching:
+```
+if (obj instanceof String s) {
+    System.out.println(s.toLowerCase());
+}
+```
+Java automatically performs the cast for us. In Java 21, pattern matching is also supported in switch statements, making code cleaner and easier to read when handling multiple object types.
+
+### Spring boot actuator
+Spring Boot Actuator provides endpoints for monitoring and managing a Spring Boot application.
+
+To use it, we add the Actuator dependency and configure which endpoints should be exposed.
+
+Common endpoints include health checks, application information, metrics, and environment details.
+
+In production, I only expose the endpoints that are needed and secure sensitive endpoints.
+
+Actuator is commonly used together with Micrometer, Prometheus, and Grafana for application monitoring and visualization.
+
 ## Mock for 06/15/2026
 https://mock0615-237462387123-us-east-1-an.s3.us-east-1.amazonaws.com/mock0615.mov?response-content-disposition=inline&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Security-Token=IQoJb3JpZ2luX2VjELb%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJGMEQCIDKfQ%2BS8ic9ysopST1SBzUYKZim07knvr0ekFxQcXTDhAiByTdXh06VzoWyDe6IWJTlmWnBZBXzUSCoqFDp%2ByaKlECq5Awh%2FEAAaDDIzNzQ2MjM4NzEyMyIMto%2FZCSTUsVih%2ByRaKpYDTqPFFkrzqUkNNf08LrTtep2CjA8npLGlLudkQ%2FdbGvHoHan4mzIa0MMPtSCXvJm3YciGvT1WO0lAA5JNcGxhc2HXdYVLDNrKdynHRWJRdZ2dJLtaUDYoJr3%2BL1srPhsN73OuTRIoBNTSrN3XekDOukCz9kPnghcGxj%2BBvI4bv3CLtHeazTTq8H68sN0z7eCkhCfDLib41fta1jlbu%2B5U1BXfVxjLTJf6nxP11S1rkV%2F8GQgkQKMrGuRgu285ZGlk2m7xd8tQ5oEhsDImPVjY%2FA%2B%2BKpjHLpAS1oAaSLCBXE2UBv4d912YqROyQINfAYYUmqYhswzaEglhmm75sxcUUIIMj4%2Bb364zwWYS8lEWaT8hqyg8yEoyW7t0YvwDhLo%2BD2y59SQgQ2IWNzwYPy4qg%2FDk666%2Fikbew94oda4lFE%2BDY8D6pe635BaWSo4BV9FSKzsEnIS%2BNX18JdcBTxkz4RvrZ0AN%2B0j3KwlhUFflNzBESZ%2BG67T%2FCSfpP4zywuK6Itg4Dqb4aeAgbg8nIysqYqJGvkaKkjCaicfRBjrfAhGrnpmDYfU1OXGFsPadZsIFLPcYW91kZs6vPOsjjLaFWc99hWpwWqUdDTvYmhhA4M94x5izzw2UhtLv3eVspQdr4tRj4StUUNlrW7oVRNEGuF%2BarW7L%2B08K4W3ktsBwO0XDMrmPRRiCZ%2FY%2FpUM1rlhTwMGVhfLdGYcYY1NHvgD0fZhlqNoeNky58JSDehGnuyn9J7pT1%2F8Sz%2FSQg9yg9RBgAQ66F4t2XqGJ1TWGjxwoP3KKlJh2iTh2lpj0Yj7JHt5TlAzMClJaiAA2LEX4VJ2%2BRYNhRt7cXj2WahP%2BE98zauOn5NXiB2Ak2Z3E3fCEv7VCNPXsRxxlmf6BKRxaUQLKKPADeWYRcYGRBvwuj9Pdycq%2BuWTSt1XH%2BpwhHjBk9c2K8M0RWbv8ZmqPlGwOaL8iuN%2BnkEwAgLtS88nC60eI0GUmlbfgUud9EmRCSLyYMmFlsZOd0A%2F1i%2BIfiqn4qg%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIATOSO4PGZ5JHP2JHL%2F20260616%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260616T215051Z&X-Amz-Expires=43200&X-Amz-SignedHeaders=host&X-Amz-Signature=38332792eb66488ae9a737811ac485cfe78f844cf5fe12de3a5aa07e6b23d7e8
 
