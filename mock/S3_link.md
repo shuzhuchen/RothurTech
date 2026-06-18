@@ -1,3 +1,104 @@
+## mock for 06/17/2026
+https://mock0617-237462387123-us-east-1-an.s3.us-east-1.amazonaws.com/mock0618.mov?response-content-disposition=inline&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEOX%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIQCcZXjUprS32uSyA5z7zKl9tHxjQFQawLWToHkheEr4IQIgSDPukcEGI1VpzfsdEzkix%2BHYN3abrt2tBENvRbRtw7cqwgMIrf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgwyMzc0NjIzODcxMjMiDAVxHSO4Z1TXkK9dNSqWAxZZQ4JNTOAVKvXqNg8%2FOMPydaT0OamfsxI43coPc4DnsQubUu7CWO%2BRfPf%2BXrghmHDxRNi9dvZ057PJ5yQuGNoX7zVmI9%2Fi3v0wGuSD9s95vlN1L5paKP6eMeXDKsDJatuawrldwRExeQcT%2BQ9BYGfYd9VXK3Y0UmQbCVIRolWEyjzWIyCMBA2mpf%2Fj9y6mEkaMam%2Fx%2FlCUxt9kaocvYrrmdE6E29Par%2FQkSDJUqu%2BVah0Rh2f%2B3RdBl8HpFLZclFmH4Lr5MGvixYJuR6c8r6hbWJys%2Fu%2ByvLhKLlq8wixy6%2Fjh9%2BXOj8hNqzs%2F0uSqFrpKIOSFy1FqK%2F6bTL5xKYTHbt1VqrxZ4a8a6mvmitIsYw9BdHugSvYUrUj6CohEkdMD5sktWxCL3HHorQ%2BEMcZ9xJ8sCzb4kaz5GkUO52lmIUAVh7h5WNO85PqOgEjmLc%2B8CfF7km%2FU76PUxP3zmJZ5G2arZdCaeWsF7pPqDJ4t1m67fE5mPMilYffLDWrr92z23c%2Bi1snx3WYfpAJcno%2FPMHfRjoYwnJbR0QY63gKryTb7az%2BGy3hIEOXSe3K830V9RgbiMDjvWytmjNYIO33qQC%2FAOtelybwOLLnnY2MQDIaWVzF6FWKdkGHgM6gRuKcmr3Hn3ZlysaVC5IZwZxbKFU46bHZs8kFx2MxaG%2BRaFR8pi9M616%2B2DLJL8%2BMG2ho5WDX%2F9si0E4CEFAv3a2jhsHhDjO2uihMe6LvPhMneQ9qo%2F%2F%2BfJc6W%2FIUQS732sHNYV4vPuBDe%2F0mVhC%2BHbPH3ieOKGUuZtC0pD2yn4yr4cDuOG%2BauPPDARX8BlmJjGOhCA9bGtk3ap812CsCaCVmOchghb0oxSGF5u9yKdpPuPO64t0yBfIKNvt3PQpw%2FPNCw32llaOZoehaci9hXGoc1GPfise3QaC%2BoA1SobZLSINd3KOVtz9RdBNJpuSsNLDyVpNuQ20EGZG4TLPYC6V1JH8QKk29WG9duQE2GXLYuvYnIIuS55VOgrdPm6Q%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIATOSO4PGZ6OJYCYKH%2F20260618%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260618T200744Z&X-Amz-Expires=43200&X-Amz-SignedHeaders=host&X-Amz-Signature=f51191f1881f8f9ef92c1f2cdb544994c7150c767742df87c84ca8986c3512b1
+
+### equals vs ==
+In Java, == and equals() are both used for comparison, but they compare different things. The == operator compares object references, which means it checks whether two variables point to the exact same object in memory. It cannot be overridden.
+
+equals() is a method used to compare the actual content or logical value of two objects. For equals() method, if we override it, it compares whether two objects are logically equal. If we do not override it, it also compares object references.
+
+Also, if we override equals(), we should always override hashCode() as well, especially when the object is used in HashMap, HashSet, or other hash-based collections.
+
+### what annotations have you used before?
+In my Spring Boot projects, I use annotations throughout the entire application lifecycle.
+
+First, during application startup, I use @SpringBootApplication, which includes @EnableAutoConfiguration, @ComponentScan, and @Configuration.
+
+For bean registration, I mainly use @RestController, @Service, and @Repository for the three-tier architecture. For third-party classes that I cannot modify, I use @Configuration together with @Bean to register them into the Spring container.
+
+For dependency injection, I primarily use constructor injection. If there is a circular dependency, I may use @Lazy. When multiple beans have the same type, I use @Primary or @Qualifier to resolve the conflict.
+
+For REST APIs, I use @RequestMapping at the class level and @GetMapping, @PostMapping, @PutMapping, and @DeleteMapping for different HTTP methods. To parse requests, I use @PathVariable, @RequestParam, @RequestBody, and @RequestHeader.
+
+For validation, I use @Valid together with annotations such as @NotNull, @Min, @Max, and @Email on DTOs.
+
+For AOP, I use @RestControllerAdvice and @ExceptionHandler for global exception handling. I also use @Aspect with @Before, @After, and @Around when implementing logging or cross-cutting concerns.
+
+For database access, I use @Entity, @Id, @Column, and @GeneratedValue for ORM mapping, and @Transactional to ensure transaction consistency.
+
+### new feature in java 17
+record class and sealed class.
+
+A record class gives us an immutable class. For example, a transaction that has already happened should not be changed once it is loaded. Therefore, we can design the transaction as a record.
+
+For a sealed class, we do not allow other classes to inherit from it unless they are explicitly listed in the permits clause. In other words, we can control exactly which subclasses are allowed to extend the parent class.
+
+### how to inject bean with same type
+ We can either set one of those beans with the same type as the primary bean by using the `@Primary` annotation, or we can use `@Qualifier` to inject a specific bean based on its name.
+
+We do this because Spring performs dependency injection by type by default. If there are multiple beans of the same type, Spring will not know which one to inject and will throw an exception during application startup.
+
+Therefore, instead of injecting by type, we can use `@Qualifier` to inject the bean by name, or use `@Primary` to specify the default bean.
+
+### oop 4 principles
+OOP organizes code around objects rather than functions. Java has four pillars:
+
+Encapsulation — I use access modifiers to control what's exposed, fields are private, accessed through getters and setters.
+
+Inheritance — a child class extends a parent, reusing and extending behavior. Java only allows single class inheritance but multiple interface implementation.
+
+Polymorphism — overloading at compile time with different method signatures, overriding at runtime with the same signature.
+
+bstraction — hiding implementation details through abstract classes and interfaces, exposing only what's necessary.
+
+### what is Executors library
+The Executors library is a utility class in Java that provides built-in methods to quickly create common types of thread pools, such as fixed thread pools, cached thread pools, and single-thread pools.
+
+Instead of relying on the default library methods, the recommended practice is to manually customize my thread pools using seven parameters: Core pool size, Maximum pool size, Waiting queue, Rejection policy, Keep-alive time, Time unit, and Thread factory
+
+When configuring these parameters, we must ensure we are using bounded waiting queues and reasonable maximum pool sizes. If we rely on the default Executors library that might use boundless queues or excessively large thread limits, a massive influx of tasks will consume all available memory and cause the JVM to crash with an Out of Memory (OOM) error.
+
+### java 21 features
+One major feature in Java 21 is Virtual Threads. Before that, threads were heavyweight resources and expensive to create. Virtual Threads are treated more like normal objects that can be created and recycled during runtime.
+
+Pattern matching for switch means switch can match not only exact values, but also object types and patterns, so we don't need to manually write many instances of checks and casts.
+
+### what is thread local
+ThreadLocal provides a separate copy of a variable for each thread.
+
+Instead of sharing the same variable, each thread stores its own value.
+
+It is commonly used for request context, user information, trace IDs, transaction context, and logging information.
+
+Internally, each thread maintains a ThreadLocalMap. The ThreadLocal object acts as the key, and the value is stored inside the current thread.
+
+When using thread pools, we should call remove() in a finally block to avoid stale data and memory leaks.
+
+### java version
+I've worked with Java 8, Java 17, and Java 21.
+
+My current projects are running on Java 21 because Spring Boot 3 requires Java 17 or above.
+
+I also have hands-on experience with Java 8. I frequently used features such as Optional, Stream API, lambda expressions, and functional interfaces.
+
+I've also worked with Java 17 after upgrading to Spring Boot 3. Since Spring Boot 3 requires Java 17 or above, I became familiar with newer features such as record classes for immutable data objects and sealed classes for controlling inheritance.
+
+Right now I'm using Java 21 and some of its newer features, such as virtual threads, which help simplify concurrent programming and improve scalability for I/O-intensive applications.
+
+### injection types
+DI is an implementation of Inversion of Control (IoC) in the Spring framework for the beans. We have three types: field injection, constructor injection, and setter injection. 
+
+Since Spring Boot 2.0, we should always use constructor injection. The @Primary has it prevent or the NullPointerException, ensure the bean exist during the booting up and also give an easier way to do the unit test. While we are going to do DIs in our project, sometimes there will be circular dependencies happened. We use the @Lazy annotation to handle that.
+
+### have you used patch
+Yes, I have used patch and also I have used the put as well. The difference between the put and patch is that put is going to update the entire row of the records in the SQL database. Meanwhile the patch is just going to update some of those columns inside the same row.
+
+So if we have a partial update we should consider to use the patch. If we're having the whole row update we should use the put.
+
+### garbage collector
+The garbage collector is going to execute garbage collection. the garbage collection is automatically being done by a guardian thread when my Java application is boot up. I don't have to manually recycle any of those memories by invoking the garbage collection via garbage collector. However, as the developer, I'm able to configure the different types of the garbage collectors using the JVM args, -XX and then garbage collector, then I can configure. The different garbage collectors that I can chose from serial, parallel, ZGC, Shannando, Epsilon based on different scenarios. 
+
+The Serial GC uses a single thread and is suitable for small applications. The Parallel GC uses multiple threads and focuses on high throughput in multi-core environments. For low-latency applications, Java provides G1 GC, ZGC, and Shenandoah GC, which aim to reduce pause times. The heap is divided into the Young Generation and the Old Generation. New objects are created in the Young Generation, and objects that survive multiple GC cycles are promoted to the Old Generation. This design improves garbage collection efficiency.
+
 ## Mock for 06/16/2026
 https://mock0616-237462387123-us-east-1-an.s3.us-east-1.amazonaws.com/mock0616.mov?response-content-disposition=inline&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEM3%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIQD7QONbpNNFJxyZaDuKcFuHybXcCDSP3zgGhqrpaOjlpwIgTBBG%2FnROc9vypnSY6od6FA8UDq1paXPIgBw35gQfw1UqwgMIlv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgwyMzc0NjIzODcxMjMiDPmtnOBy8CJCfATvLSqWA6uHGLKfi7F%2Bcl3k6KRWE0Dfv8wgKArqxkSD9n9dyJafiEeRPat68OpAnzN3jfXWNYrrxUsJWFwWM2qyKzvfcW3IEyENJOzUBtxti56MMqO9Z3L9EXpqa0ADKyzVTYe0Hq0LwWUWptqkqRqEzIALWz72FHpuvAg%2BJFalHFCqM%2FBQAPOE8XNHop9kMz7ajV2l2tQa09NdOp6mMP%2Fmhy%2Bh6jLYsdQFD2qEExzKsi5iDkPMv8u9PHHTOtr4lUEeryUsRDEw6e641SQMfwc348hKgQUVMXMLutfvtGS49MEcvgAs2jA6f5jhdqVyiHd10RQ1gAwjCnEtiyKS2XTn9%2BnUivU61nWYr47sTsT1hShtXnlL%2FECwH5bDqeHRfkXduv7c9OqP3vRt6jSgJ2RLSHJFWnJPZXW%2B9zvFIb1GZfirmJlUha2XYkacsj4hlSYot5OvzEtVz8FvC1U7kYAe47J%2F%2BrJWP0cUXClyndl2AE45XcLkli%2Bx%2FO2ToZTGWd7eT%2B%2FZfGOWT1SzizxJIQvkO9X8yRXsn60zW6Mw%2FYnM0QY63gLvjkNqY63oKwJmlCrXho6AK%2FZOEhjOnVJMM5SoeN%2BrNVjvuEIOBU6%2BiupHy9l8c%2Ftvpr7czwvbkyXMcx2%2FZBb5H4TTa42w4vtBhoIkvfLLSRqQMlMtAKyhQT0n%2BXhB5nTKfyXpYuna0dbA8ho6RxV9nUd6WGTbYb48CnslkJcq9BZyg%2BVcNNnFoSo%2BtT6rVs%2Fx8n4W9xxvvbdU9bbDaI06Uo5%2B5dikQwWqyYd9GOAw964nVj7kuOd0%2BRJVHgrogGTUj%2BVP8rDEfV04nyXxOgYfDoVp0gCohIfS%2BTOVDGhqzx7zV6IRBSJX0LtBBSHutFeznNM%2BXUQKmuCgdz31jwKkBG%2FbiJgbxTR3SNhe3X3KKH2GI2C%2B%2FMajgi4Jh9Sm%2BUoAsIsfztHrCpeOPpiTOdh8ZjcTzy3lMj2tUMVORutWwlXMt3wsvyIFED6%2FVVIbXozE1kZlDndaxTlAXarreg%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIATOSO4PGZQT2HTAGM%2F20260617%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260617T203702Z&X-Amz-Expires=43200&X-Amz-SignedHeaders=host&X-Amz-Signature=f4676148956441d86ebe50e0493118a67e4c3aead915ddcff2d38fb56fe8550d
 
