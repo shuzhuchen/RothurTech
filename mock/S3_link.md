@@ -1,3 +1,62 @@
+## mock for 06/18/2026
+https://mock0618-237462387123-us-east-1-an.s3.us-east-1.amazonaws.com/mock0618.mp4?response-content-disposition=inline&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEP3%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJIMEYCIQDLw%2BvBG9yCMs39apA%2F8IJOEY9zi2RL9XcjtpADrFMFjAIhAMC3KCe13Z6HyY%2FmO9306hYL4G6Wha3xuMrmGFi7dOLmKsIDCMb%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQABoMMjM3NDYyMzg3MTIzIgxUx9N%2Bl94y3Az0GcQqlgPXm0c5fcP%2B0bnXmiZuauYSrUfAKgD6s%2F50PjhOvONAneI8Cq6hsEYZGfBcNyB40b1IJUrQlTxdhJR29wSTyAuL2ez1fNGID8jEGyqgVPS%2FYS3J6rHw4pHHrmcUDlw8pjb%2BvQlMnhtPfz%2FZHxlpWSD6ECTGTR%2BfDuPoL24jiMMaPU7bXSgXaU7JDfIIUVbZmMBMrm9dsjokhtkt7uKhT1c0Pl2H2zlN9dRqcVtFHetpX3b28oNp%2F3d4bDUfwb1%2FA%2F1Rdk0CQ36w5Ovg%2BnUCl2Bi%2B1ZZytXqbdQhm4Eo5khSTG5cIcflKd9TEQb3GPzYyO61o2XnoCMsO9OlB1M%2BW11Y2ducQjOtDmWj5%2BMbMV1EvRpVZntjTExYKdiimzzVkod2WevGVoAZlHAsASN%2Bv69MXBLnHVVjUwOVKo7oIyMNRBE3SkBg%2FBWcBUuwsdW30FcBqg1OpLRoLNZe01WleowG5l%2BGH4kQAxrhPR%2Bbq%2Ftwk9KQ6gpgWkwiDmn%2BxLKUtlOC7%2Fg7GKpcRqvSDmq1qTwvccic8AOoMPvN1tEGOt0CasbPOcf0395xvQ2SerPtL5BciypxhAOHuib8GrVkB4YFkjxGFr0%2Fv8x%2FEnYCFplQu5hDSJEer%2Bvc%2FtNm8mpy03h1Bzh23JY6ye0GJNbM75OIDBFPJ6gSt2BnniLy%2FMNO1b8w2kA4paMAd5xst7n2IXX%2FYEmnTEI%2BWcXY%2FwGUu6FWNVODU3IfHkyISHxrx2RffhY4y0P%2BiZiWcTcyAKEQayQaol6a2wAhkB9olDKTub26FfkNPCH%2FMLRagKiHHjYUFj48EV5q1KB%2BEs5FY5OV5xQ7RGIqqJWgwhiwn%2FMzdJoloOEs%2BcI%2FyH%2FJ%2B3x1YEYH5hpZY3a7HgTUI563ZYjsHKI3Mbw4jPMgYye%2BIh3e17bV3tQWQx1ylBvkllZtrlMaNXqAjGhE3bpkBNbe2wgdv4aVWF475e13sxiX%2FmLcSzCfJJWj4ejC7ned8l5eG8Od9d2XRNhVeEf8yGhW9Q%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIATOSO4PGZVAZK5N63%2F20260619%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260619T203219Z&X-Amz-Expires=43200&X-Amz-SignedHeaders=host&X-Amz-Signature=5d1b24b602ffffbe66d0865055c9f6fd39457e482e4b3641c926b0d583a16624
+
+### what spring boot version you used
+I have worked with both Spring Boot 2 and Spring Boot 3. In my most recent project, I used Spring Boot 3. One important change in Spring Boot 3 is the migration from `javax` to `jakarta`, and it requires Java 17 or later.
+
+### how to write restapi in spring boot
+When I build a REST API in Spring Boot, I start with a controller using `@RestController`, which is equivalent to `@Controller` plus `@ResponseBody`.
+
+Then I use `@RequestMapping` to define the base URL. I generally use nouns rather than verbs in URLs and include a version, for example, `/api/v1/students`.
+
+For CRUD operations, I map HTTP methods such as GET, POST, PUT, and DELETE with `@GetMapping`, `@PostMapping`, `@PutMapping`, and `@DeleteMapping`.
+
+Based on where the request data comes from, I use `@RequestHeader`, `@RequestBody`, `@RequestParam`, or `@PathVariable`.
+
+For validation, I use `@Valid` with annotations such as `@NotNull`, `@Min`, `@Max`, and `@Email` on request DTOs.
+
+For responses, I usually return `ResponseEntity` so I can control both the response body and HTTP status code.
+
+For exception handling, I typically use `@RestControllerAdvice` with `@ExceptionHandler` to return consistent error responses.
+
+### diff recursion and iteration?
+Recursion is when a method calls itself, so it needs a base case to stop. Iteration uses a loop, such as `for` or `while`, and stops when the loop condition is no longer met.
+
+The main difference is memory usage. Every recursive call creates a new stack frame, so deep recursion can cause a stack overflow. Iteration usually uses less memory because it does not keep creating new stack frames.
+
+Recursion can be more readable for DFS, tree traversal, or backtracking. But for production backend logic, I always consider the maximum input size. Under high traffic or with large inputs, deep recursion can increase memory usage quickly. In those cases, iteration is usually safer and more stable.
+
+### what is fairlock
+A fair lock gives waiting threads access to a lock roughly in the order they requested it, following a FIFO, or First-In-First-Out, policy.
+
+In Java, locks are unfair by default, so there is no guarantee which waiting thread acquires the lock next.
+
+A fair lock can be created with `ReentrantLock` by passing `true` to its constructor. The trade-off is that fairness can reduce throughput.
+
+### what is sealed class
+Sealed classes were introduced in Java 17 and are used to control inheritance. A sealed class or interface explicitly specifies which classes are allowed to extend or implement it. Any class not listed in the `permits` clause cannot do so.
+
+### introduce what is Spring Framework
+Spring Framework is a Java framework. Two of its core concepts are IoC and AOP.
+
+IoC stands for Inversion of Control. In Spring, Java objects are registered as beans and managed by the Spring container, so I do not need to manually create dependencies with `new` throughout the application. This gives us looser coupling, and Spring also manages the bean lifecycle.
+
+Spring beans also have different scopes. Singleton is the default; other scopes include prototype, request, session, and application. We can configure the scope with `@Scope`.
+
+Dependency Injection, or DI, is a common way to implement IoC. The three main types are field injection, setter injection, and constructor injection. I prefer constructor injection because it makes required dependencies explicit, fails fast at startup if one is missing, and is easier to test.
+
+AOP lets us add cross-cutting behavior around existing business logic, such as logging, transactions, security, or exception handling, without putting that code into every business method.
+
+Two common ways I use it are `@RestControllerAdvice` with `@ExceptionHandler` for centralized exception handling, and `@Aspect` for other cross-cutting concerns. With `@Aspect`, the pointcut defines where the logic runs, and advice annotations such as `@Before`, `@After`, `@Around`, `@AfterThrowing`, and `@AfterReturning` define when it runs.
+
+### What is consumer?
+`Consumer` is a Java 8 functional interface that accepts one input and returns no result. I commonly use it with lambda expressions, the Stream API, or asynchronous task chains.
+
+For example, it is used by `forEach()` in the Stream API and by `Optional.ifPresent()` when I want to perform an action on a value, such as logging it or saving it.
+
+
+
+
 ## mock for 06/17/2026
 https://mock0617-237462387123-us-east-1-an.s3.us-east-1.amazonaws.com/mock0618.mov?response-content-disposition=inline&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEOX%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIQCcZXjUprS32uSyA5z7zKl9tHxjQFQawLWToHkheEr4IQIgSDPukcEGI1VpzfsdEzkix%2BHYN3abrt2tBENvRbRtw7cqwgMIrf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgwyMzc0NjIzODcxMjMiDAVxHSO4Z1TXkK9dNSqWAxZZQ4JNTOAVKvXqNg8%2FOMPydaT0OamfsxI43coPc4DnsQubUu7CWO%2BRfPf%2BXrghmHDxRNi9dvZ057PJ5yQuGNoX7zVmI9%2Fi3v0wGuSD9s95vlN1L5paKP6eMeXDKsDJatuawrldwRExeQcT%2BQ9BYGfYd9VXK3Y0UmQbCVIRolWEyjzWIyCMBA2mpf%2Fj9y6mEkaMam%2Fx%2FlCUxt9kaocvYrrmdE6E29Par%2FQkSDJUqu%2BVah0Rh2f%2B3RdBl8HpFLZclFmH4Lr5MGvixYJuR6c8r6hbWJys%2Fu%2ByvLhKLlq8wixy6%2Fjh9%2BXOj8hNqzs%2F0uSqFrpKIOSFy1FqK%2F6bTL5xKYTHbt1VqrxZ4a8a6mvmitIsYw9BdHugSvYUrUj6CohEkdMD5sktWxCL3HHorQ%2BEMcZ9xJ8sCzb4kaz5GkUO52lmIUAVh7h5WNO85PqOgEjmLc%2B8CfF7km%2FU76PUxP3zmJZ5G2arZdCaeWsF7pPqDJ4t1m67fE5mPMilYffLDWrr92z23c%2Bi1snx3WYfpAJcno%2FPMHfRjoYwnJbR0QY63gKryTb7az%2BGy3hIEOXSe3K830V9RgbiMDjvWytmjNYIO33qQC%2FAOtelybwOLLnnY2MQDIaWVzF6FWKdkGHgM6gRuKcmr3Hn3ZlysaVC5IZwZxbKFU46bHZs8kFx2MxaG%2BRaFR8pi9M616%2B2DLJL8%2BMG2ho5WDX%2F9si0E4CEFAv3a2jhsHhDjO2uihMe6LvPhMneQ9qo%2F%2F%2BfJc6W%2FIUQS732sHNYV4vPuBDe%2F0mVhC%2BHbPH3ieOKGUuZtC0pD2yn4yr4cDuOG%2BauPPDARX8BlmJjGOhCA9bGtk3ap812CsCaCVmOchghb0oxSGF5u9yKdpPuPO64t0yBfIKNvt3PQpw%2FPNCw32llaOZoehaci9hXGoc1GPfise3QaC%2BoA1SobZLSINd3KOVtz9RdBNJpuSsNLDyVpNuQ20EGZG4TLPYC6V1JH8QKk29WG9duQE2GXLYuvYnIIuS55VOgrdPm6Q%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIATOSO4PGZ6OJYCYKH%2F20260618%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260618T200744Z&X-Amz-Expires=43200&X-Amz-SignedHeaders=host&X-Amz-Signature=f51191f1881f8f9ef92c1f2cdb544994c7150c767742df87c84ca8986c3512b1
 
