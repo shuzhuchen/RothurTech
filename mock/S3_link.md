@@ -1,3 +1,70 @@
+## mock for 06/19/2026
+https://mock0619-237462387123-us-east-1-an.s3.us-east-1.amazonaws.com/2026-06-22%2011-39-11.mov?response-content-disposition=inline&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEEQaCXVzLWVhc3QtMSJHMEUCIDtI6MpHHUtORNLwEpr%2B60F%2BZSoUQ%2BTxsyNaSuqNmCtNAiEA8dAqvVZmHvQf13ToqfQblQdtLrMYs905ba3ts6K9JeAquQMIDRAAGgwyMzc0NjIzODcxMjMiDFyXU5gBKFO%2B3uqg4CqWA6TfF9dKNzbcl5WgWHvg8aHEKwZz9MJRlgx%2By5l4beNC34%2FtYCvoXx2tKxlOmxH7VQP0H0nSPIF%2FRRiookUhA9Y6e9iNzMwfIiA6zZKol79p%2FmtgjEvmDcFTHYOmNKGDUcleZiLxf43EhQGl%2FZbLFrE1MGeSzVw9lMED1zZpMZaTcWS4qQJKbmm62FxD8lk57yPFiqHZj1nYtdvQWnT03zJ3nOlxpQHKm%2FphA5Hi5pzMvKTfZsvK1%2BbRSh27SI%2B1%2FsDjGUUTIqQjq4wd6x1fE2sWgJT7rmnc4tLS%2Bqsnm%2BMkiiGoQLgCgSj13jUlouFbg06EouxmJ1OEEVIErGbMjgQ7%2BrC4%2Fm8GrWEf8u4C2bIi50wlSwsAL8OrdnqQgd66SACN4eRI1CSRWoTiSAZn35ZBLct6d2fSzeynZi5NT9yBPRb4qbR2iPZhme%2BV1SoujDy%2BE7t1FxPch%2F8JlF4DrRWkXzMMih2CxqTl1JcDloCFOc1QunQQHyroVuwBjNd1c2jpoZ4l16DLGAVsUBAA7J1RcFh4vlwwv5zm0QY63gKJAOm5j40TTfER09%2FQdyXWLdQXodfo39xxFTZ1%2F7TK0sw%2BCfYcEMgUPr%2BFX%2Fep2sOT73zKrzMhS1CTAX7nr50qEH9d5WZ1FE5cUsKMNivyFC5VNEAaM7kyOwu4Xbs9fg8y4mwE4vhzDv%2Bij6mN3hRnVtxl2yWFQEoIE8jgWQptutawLpkwn1orPH%2B8PIja2%2B0OX%2BwXgW3ZqIAYYjw2JhG3Y4HIOO8k0ilOkC7vxxuC%2Bw%2B1pQ5ZJP9%2FuI8P4wG51o70MzCGc1BrJjzf16771r%2BxoZpPHZjAvY%2Fza%2Fzkoo7haUNWcY4R%2BVpKhws%2FJAcikW9lcRNaiXaSUDwzOFZqquCiefWCZ5tM78cvcNR7McCkzG5gt3kbbHDlOSt084%2FrTWdNpA4k6rXUFF4Zh5s75H%2FqIz6RK9wSpkR3eBZT4OtiRcjeD7C8wuX2bvu0OCNTsnTxKC4qYjXxr7RVjRcqjQ%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIATOSO4PGZ6CMQ63AY%2F20260622%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260622T193654Z&X-Amz-Expires=43200&X-Amz-SignedHeaders=host&X-Amz-Signature=ff3693435482819738cac975bb1295ea92b47dc89d15ad3a75322ab3a947300a
+
+https://mock0619-237462387123-us-east-1-an.s3.us-east-1.amazonaws.com/2026-06-22%2011-43-55.mov?response-content-disposition=inline&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEEQaCXVzLWVhc3QtMSJHMEUCIDtI6MpHHUtORNLwEpr%2B60F%2BZSoUQ%2BTxsyNaSuqNmCtNAiEA8dAqvVZmHvQf13ToqfQblQdtLrMYs905ba3ts6K9JeAquQMIDRAAGgwyMzc0NjIzODcxMjMiDFyXU5gBKFO%2B3uqg4CqWA6TfF9dKNzbcl5WgWHvg8aHEKwZz9MJRlgx%2By5l4beNC34%2FtYCvoXx2tKxlOmxH7VQP0H0nSPIF%2FRRiookUhA9Y6e9iNzMwfIiA6zZKol79p%2FmtgjEvmDcFTHYOmNKGDUcleZiLxf43EhQGl%2FZbLFrE1MGeSzVw9lMED1zZpMZaTcWS4qQJKbmm62FxD8lk57yPFiqHZj1nYtdvQWnT03zJ3nOlxpQHKm%2FphA5Hi5pzMvKTfZsvK1%2BbRSh27SI%2B1%2FsDjGUUTIqQjq4wd6x1fE2sWgJT7rmnc4tLS%2Bqsnm%2BMkiiGoQLgCgSj13jUlouFbg06EouxmJ1OEEVIErGbMjgQ7%2BrC4%2Fm8GrWEf8u4C2bIi50wlSwsAL8OrdnqQgd66SACN4eRI1CSRWoTiSAZn35ZBLct6d2fSzeynZi5NT9yBPRb4qbR2iPZhme%2BV1SoujDy%2BE7t1FxPch%2F8JlF4DrRWkXzMMih2CxqTl1JcDloCFOc1QunQQHyroVuwBjNd1c2jpoZ4l16DLGAVsUBAA7J1RcFh4vlwwv5zm0QY63gKJAOm5j40TTfER09%2FQdyXWLdQXodfo39xxFTZ1%2F7TK0sw%2BCfYcEMgUPr%2BFX%2Fep2sOT73zKrzMhS1CTAX7nr50qEH9d5WZ1FE5cUsKMNivyFC5VNEAaM7kyOwu4Xbs9fg8y4mwE4vhzDv%2Bij6mN3hRnVtxl2yWFQEoIE8jgWQptutawLpkwn1orPH%2B8PIja2%2B0OX%2BwXgW3ZqIAYYjw2JhG3Y4HIOO8k0ilOkC7vxxuC%2Bw%2B1pQ5ZJP9%2FuI8P4wG51o70MzCGc1BrJjzf16771r%2BxoZpPHZjAvY%2Fza%2Fzkoo7haUNWcY4R%2BVpKhws%2FJAcikW9lcRNaiXaSUDwzOFZqquCiefWCZ5tM78cvcNR7McCkzG5gt3kbbHDlOSt084%2FrTWdNpA4k6rXUFF4Zh5s75H%2FqIz6RK9wSpkR3eBZT4OtiRcjeD7C8wuX2bvu0OCNTsnTxKC4qYjXxr7RVjRcqjQ%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIATOSO4PGZ6CMQ63AY%2F20260622%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260622T193722Z&X-Amz-Expires=43200&X-Amz-SignedHeaders=host&X-Amz-Signature=b22903448abb4c97ac25022584275e13c181cebb07df4703f9b6dc01085f0678
+
+### what is singleton design pattern?
+The Singleton design pattern ensures that a class has only one instance and provides a global access point to that instance. In Java, I usually explain it in two ways: eager loading and lazy loading.
+
+With eager loading, the instance is created when the class is loaded, usually with a `static final` field. With lazy loading, the instance is created only when `getInstance()` is called for the first time.
+
+The constructor is private so no other class can create a new object directly. For lazy loading in a multithreaded environment, I would use `volatile` and double-checked locking to keep it thread-safe and avoid unnecessary synchronization.
+
+### where can we set CORS (backend or frontend or both)?
+In practice, CORS is mainly configured on the backend. It happens because browsers block cross-origin requests by default when the domain, port, or protocol is different.
+
+In Spring Boot, I can configure it with `@CrossOrigin` or through Spring Security configuration. Usually I keep a whitelist of allowed origins, and in a microservice setup I typically whitelist the API Gateway instead of every browser client, because the gateway is the public entry point.
+
+### can you write hint in hibernate
+Yes. Hibernate query hints are extra instructions that tell Hibernate how to execute a query.
+
+For example, I can use hints for timeout, read-only mode, fetch size, caching, or locking behavior. They are useful for tuning a specific query, but they are not the first thing I would reach for.
+
+If performance is an issue, I would usually start by checking the SQL, adding indexes, removing N+1 queries, and then consider hints or caching if needed.
+
+### monolithic vs microservices
+I would compare them from architecture, communication, scalability, fault tolerance, and maintainability.
+
+In a monolithic application, all features live in one codebase and one deployable unit. In microservices, the system is split into smaller independent services.
+
+For scalability, a monolith is usually scaled as a whole, while microservices can be scaled independently based on their own traffic. For communication, a monolith usually uses direct method calls, while microservices communicate over the network through REST, gRPC, or message queues.
+
+For fault tolerance, one failure in a monolith can affect the whole application. In microservices, failures are more isolated, and we can use retries, circuit breakers, and fallbacks to reduce impact.
+
+For maintainability, a monolith is simpler to develop and deploy at the beginning, but microservices are better when the system grows and different teams need to work independently. The tradeoff is that microservices also add more operational complexity.
+
+### what annotations and configurations you did in eureka in spring boot
+Eureka is the service discovery component I used to register and locate services.
+
+On the Eureka server side, I added `@EnableEurekaServer` to the Spring Boot main class. On the client side, I configured `application.yml` with the Eureka server address, for example `eureka.client.service-url.defaultZone: http://localhost:8761/eureka`.
+
+Once the service starts, it registers itself with Eureka and can also discover other services through it.
+
+### if we have microservices calling each other a -> b -> c, and if some of them are returning 500 errors, what should we do?
+First, I would confirm which service is actually failing by checking logs, tracing, and metrics. The key is to find where the error starts in the call chain.
+
+Then I would contain the impact by using timeouts, limited retries, and a circuit breaker so the failure does not spread to other services. If possible, I would route traffic to a healthy instance or return a fallback response.
+
+If the work can be done later, I would move it to a message queue and retry asynchronously after the service recovers. After that, I would investigate the root cause in the application, database, or infrastructure layer.
+
+### how do you secure communication in microservice
+I would secure microservice communication in four areas: network isolation, authentication, encryption, and monitoring.
+
+First, only the API Gateway should be exposed publicly. Internal services, databases, and caches should stay in a private network.
+
+Second, the gateway should handle user authentication and authorization, and internal services should authenticate each other with service tokens or mutual TLS.
+
+Third, all traffic in transit should be encrypted with HTTPS or mTLS. Finally, I would keep access logs and monitor abnormal or unauthorized requests.
+
+### SQL: join, group by and count
+`JOIN` is used to combine related data from multiple tables.
+
+The common types are `INNER JOIN`, `LEFT JOIN`, `RIGHT JOIN`, and `FULL OUTER JOIN`. `GROUP BY` is used when I want to group rows by one or more columns.
+
+`COUNT` is an aggregate function for counting records. `COUNT(*)` counts all rows, while `COUNT(column)` only counts non-null values in that column.
+
+I often use `COUNT` with `GROUP BY`, for example to count how many employees are in each department.
+
 ## mock for 06/18/2026
 https://mock0618-237462387123-us-east-1-an.s3.us-east-1.amazonaws.com/mock0618.mp4?response-content-disposition=inline&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEP3%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJIMEYCIQDLw%2BvBG9yCMs39apA%2F8IJOEY9zi2RL9XcjtpADrFMFjAIhAMC3KCe13Z6HyY%2FmO9306hYL4G6Wha3xuMrmGFi7dOLmKsIDCMb%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQABoMMjM3NDYyMzg3MTIzIgxUx9N%2Bl94y3Az0GcQqlgPXm0c5fcP%2B0bnXmiZuauYSrUfAKgD6s%2F50PjhOvONAneI8Cq6hsEYZGfBcNyB40b1IJUrQlTxdhJR29wSTyAuL2ez1fNGID8jEGyqgVPS%2FYS3J6rHw4pHHrmcUDlw8pjb%2BvQlMnhtPfz%2FZHxlpWSD6ECTGTR%2BfDuPoL24jiMMaPU7bXSgXaU7JDfIIUVbZmMBMrm9dsjokhtkt7uKhT1c0Pl2H2zlN9dRqcVtFHetpX3b28oNp%2F3d4bDUfwb1%2FA%2F1Rdk0CQ36w5Ovg%2BnUCl2Bi%2B1ZZytXqbdQhm4Eo5khSTG5cIcflKd9TEQb3GPzYyO61o2XnoCMsO9OlB1M%2BW11Y2ducQjOtDmWj5%2BMbMV1EvRpVZntjTExYKdiimzzVkod2WevGVoAZlHAsASN%2Bv69MXBLnHVVjUwOVKo7oIyMNRBE3SkBg%2FBWcBUuwsdW30FcBqg1OpLRoLNZe01WleowG5l%2BGH4kQAxrhPR%2Bbq%2Ftwk9KQ6gpgWkwiDmn%2BxLKUtlOC7%2Fg7GKpcRqvSDmq1qTwvccic8AOoMPvN1tEGOt0CasbPOcf0395xvQ2SerPtL5BciypxhAOHuib8GrVkB4YFkjxGFr0%2Fv8x%2FEnYCFplQu5hDSJEer%2Bvc%2FtNm8mpy03h1Bzh23JY6ye0GJNbM75OIDBFPJ6gSt2BnniLy%2FMNO1b8w2kA4paMAd5xst7n2IXX%2FYEmnTEI%2BWcXY%2FwGUu6FWNVODU3IfHkyISHxrx2RffhY4y0P%2BiZiWcTcyAKEQayQaol6a2wAhkB9olDKTub26FfkNPCH%2FMLRagKiHHjYUFj48EV5q1KB%2BEs5FY5OV5xQ7RGIqqJWgwhiwn%2FMzdJoloOEs%2BcI%2FyH%2FJ%2B3x1YEYH5hpZY3a7HgTUI563ZYjsHKI3Mbw4jPMgYye%2BIh3e17bV3tQWQx1ylBvkllZtrlMaNXqAjGhE3bpkBNbe2wgdv4aVWF475e13sxiX%2FmLcSzCfJJWj4ejC7ned8l5eG8Od9d2XRNhVeEf8yGhW9Q%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIATOSO4PGZVAZK5N63%2F20260619%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260619T203219Z&X-Amz-Expires=43200&X-Amz-SignedHeaders=host&X-Amz-Signature=5d1b24b602ffffbe66d0865055c9f6fd39457e482e4b3641c926b0d583a16624
 
